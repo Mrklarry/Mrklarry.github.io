@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+@import url(uni.css);
+/* image sizing */
+img#Academics {
+    width: 24em;
+    height: 16em;
+}
+
+img#About {
+    width: 20em;
+    height: 22em;
+}
+
+img#Clubs {
+    width: 24em;
+    height: 16em;
+}
+
+img#Athletics {
+    width: 25em;
+    height: 18em;
+}
+/* image shadows */
+section.imgs img {
+    box-shadow: 0px 0px 15px 0px white;
+    border: 1px ridge white;
+}
+/* link blocks */
+section.imgs h1 {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    border: 1px ridge white;
+    color: white;
+}
+
+section.imgs a {
+    text-decoration: none;
+}
+
+section#last {
+    margin-bottom: 0px;
+}
+/* grid layout above 1000px */
+@media only screen and (min-width: 1001px) {
+    article {
+        display: grid;
+        padding: auto;
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: 2fr 2fr;
+    }
+
+    section.imgs {
+        margin: auto;
+        margin: 1em auto 0.5em auto;
+    }
+}
+/* margin under 1000px */
+@media only screen and (max-width: 1000px) {
+    section.imgs {
+        margin-top: 1em;
+        width: 100%;
+    }
+    section{
+        text-align: center;
+    }
+}

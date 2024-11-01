@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+@import url(uni.css);
+
+/* image sizing */
+img#german {
+    margin: auto;
+    margin-bottom: .5em;
+    width: 24em;
+    height: 16em;
+}
+
+img#chess {
+    margin: auto;
+    margin-bottom: .5em;
+    width: 24em;
+    height: 16em;
+}
+
+/* article set up */
+article {
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding-bottom: 0px;
+}
+
+/* margins */
+p.germ {
+    margin-bottom: .5em;
+}
+
+h1,
+p {
+    margin: 0px;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+/* img box shadows */
+img {
+    box-shadow: 0px 0px 15px 0px white;
+    border: 1px ridge white;
+}
+
+/* grid layout over 1000px */
+@media only screen and (min-width: 1001px) {
+    article {
+        width: 100%;
+        font-size: larger;
+        display: grid;
+        grid-template-columns: 1.5fr 1.5fr;
+        grid-template-rows: .1fr 1fr .1fr 1fr;
+        grid-template-areas:
+            "Ghead Gimg"
+            "Gbody Gimg"
+            "Cimg Chead"
+            "Cimg Cbody";
+    }
+
+    img#chess {
+        grid-area: Cimg;
+    }
+
+    img#german {
+        grid-area: Gimg;
+    }
+
+    h1.germ {
+        grid-area: Ghead;
+    }
+
+    h1.ches {
+        grid-area: Chead;
+    }
+
+    p.ches {
+        grid-area: Cbody;
+    }
+
+    p.germ {
+        grid-area: Gbody;
+    }
+}
+
+/* margins under 1000px */
+@media only screen and (max-width: 1000px) {
+    img#german {
+        margin-top: .5em;
+    }
+}
